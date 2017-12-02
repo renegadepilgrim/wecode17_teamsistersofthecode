@@ -199,6 +199,7 @@ function generateList() {
 }
 
 
+
 window.addEventListener("load", makeIcon)
 window.addEventListener("load", showMarkers)
 window.addEventListener("load", addMapEventListeners)
