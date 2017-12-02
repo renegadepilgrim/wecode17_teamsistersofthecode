@@ -113,6 +113,12 @@ nav {
   margin: 125px;
 }
 
+#commons {
+  text-align: left;
+  padding: 5px;
+  margin: 5px;
+}
+
 .pottyList {
   list-style: none;
 }
