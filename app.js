@@ -20,6 +20,6 @@ app.use("/",router);
 //   res.sendFile(path + "404.html");
 // });
 
-app.listen(3000,function(){
-  console.log("Live at Port 3000");
+app.listen(8080,function(){
+  console.log("Live at Port 8080");
 });
