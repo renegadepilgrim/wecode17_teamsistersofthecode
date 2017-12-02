@@ -1,5 +1,5 @@
 //Declaring variables for usage//
-var pos, sortedPotties;
+var pos, sortedPotties, wifiImage;
 
 //Intitial function placing origin marker on map//
 function initMap() {
@@ -59,6 +59,12 @@ function initMap() {
 
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
+      wifiImage = {
+        url: "images/wifi.png",
+        scaledSize: new google.maps.Size(25,25),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(0,0)
+      };
     for (var i = 0; i < results.length; i++) {
       var place = results[i];
       createMarker(results[i]);
@@ -66,15 +72,16 @@ function callback(results, status) {
   }
 }
 
-      function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-          map: map,
-          position: place.geometry.location
-        });
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    icon: wifiImage,
+    position: place.geometry.location
+  });
 
-        google.maps.event.addListener(marker, 'click', function() {
-          infoWindow.setContent(place.name);
-          infoWindow.open(map, this);
-        });
-      }
+  google.maps.event.addListener(marker, 'click', function() {
+    infoWindow.setContent(place.name);
+    infoWindow.open(map, this);
+  });
+}
