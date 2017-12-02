@@ -4,6 +4,7 @@ var marker;
 var infowindow;
 var messagewindow;
 var image;
+var service;
 
 // object constructor for all potty info
 var Features = function (title, hours, position, handWash, privacy, clean, rollRating, comment) {
