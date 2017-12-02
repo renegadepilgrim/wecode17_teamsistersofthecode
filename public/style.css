@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import "transitions.css";
 
-body {
+body,html {
   background-color: white;
   font-family: "Poppins";
   width: 100%;
@@ -42,7 +42,7 @@ h3 {
   display         : block;
   float           : right;
   position        : relative;
-  background      : url('images/Household-Toilet-on-icon.png');
+  background      : url('images/white_star.png');
   background-size : contain;
 }
 
@@ -51,7 +51,7 @@ h3 {
   display         : block;
   width           : 1.5em;
   height          : 1.5em;
-  background      : url('images/Household-Toilet-Pan.ico');
+  background      : url('images/star.png');
   background-size : contain;
   opacity         : 0;
   transition      : opacity 0.2s linear;
@@ -190,4 +190,19 @@ tbody {
 
 #facilities-select {
   text-align: center;
+}
+
+header {
+  color: #FFFFFF;
+  width: 100%;
+}
+
+header>nav>#index-nav>a {
+  color: #FFFFFF;
+}
+
+#form-container {
+  width: 30%;
+  margin: 2em auto;
+
 }

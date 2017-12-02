@@ -29,13 +29,12 @@ function handleSubmit(event) {
   console.log(event.target.wash.value);
 
   var newFeature = new Features (
+    event.target.facility.value,
     event.target.reviewtitle.value,
     event.target.hours.value,
     {lat: parseFloat(event.target.lat.value),
-      lng: parseFloat(event.target.long.value)} ,
-      event.target.wash.value,
+      lng: parseFloat(event.target.long.value)},
       event.target.privacy.value,
-      event.target.clean.value,
       event.target.rollRating.value,
       event.target.comment.value);
 
