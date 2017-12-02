@@ -101,12 +101,12 @@ nav {
 
 #disclaimer {
   text-align: center;
-  background-color: rgba(112, 101, 99, 1);
+  background-color: rgb(169,169,169);
   border-style: solid;
   border-radius: 25px;
-  border-color: rgba(59, 13, 17, 1);
+  border-color: black;
   padding: 5px;
-  margin: 5px;
+  margin: 125px;
 }
 
 .pottyList {

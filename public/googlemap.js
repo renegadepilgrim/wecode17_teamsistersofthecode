@@ -1,5 +1,5 @@
 //Declaring variables for usage//
-var pos, sortedPotties;
+var pos, sortedPotties, wifiImage;
 
 //Intitial function placing origin marker on map//
 function initMap() {
@@ -37,6 +37,17 @@ function initMap() {
         position: pos,
         map:map
       });
+      
+      
+    var request = {
+      location: pos,
+      radius: '500',
+      type: ['cafe']
+    };
+  
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+      
       generateList();
     }, function() {
 //Code breaking without function in place. Possible API code issue//
@@ -44,4 +55,33 @@ function initMap() {
   } else {
 //Code breaking without function in place. Possible API code issue//
   }
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+      wifiImage = {
+        url: "images/wifi.png",
+        scaledSize: new google.maps.Size(25,25),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(0,0)
+      };
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      createMarker(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    icon: wifiImage,
+    position: place.geometry.location
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infoWindow.setContent(place.name);
+    infoWindow.open(map, this);
+  });
 }
