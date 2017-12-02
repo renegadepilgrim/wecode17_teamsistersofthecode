@@ -25,6 +25,10 @@ h3 {
   text-align: center;
 }
 
+.select-box {
+  margin-left: 60%;
+}
+
 .ratingScale:not(old){
   display        : inline-block;
   width          : 7.5em;
