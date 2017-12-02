@@ -5,25 +5,19 @@
       <meta name="viewport" content="initial-scale=1.0">
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="style.css">
-      <!-- Bootstrap latest compiled and minified CSS -->
+      <script src="googlemap.js"></script>
+      <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <!-- Bootstrap optional theme -->
+
+      <!-- Optional theme -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-      <!-- Bootstrap Select latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-      <link href="scifi_custom.css" rel="stylesheet">
-      <!-- Bootstrap latest compiled and minified JavaScript -->
+
+      <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      <!-- Bootstrap Select latest compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.js"></script>
     </head>
     <body>
       <header>
         <img id="tardis" src="images/pp_icon.jpg" alt="Porta Potty">
-        <h1>Stop and Drop</h1>
-        <h3><i>When nature calls, will you answer?</i></h3>
         <nav>
           <div id = "index-nav">
             <a href = "index.html">Home</a>
@@ -32,14 +26,15 @@
         </nav>
       </header>
       <br>
-      <div id="selection-menu">
-        <select>
-          <option value="showers">Showers</option>
-          <option value="toilets">Toilets</option>
-          <option value="laundry">Laundry locations</option>
-          <option value="wifi">Wifi locations</option>
-          <option value="phone">Phone charging locations</option>
-        </select>
+      <div class="form-group text-center">
+       <label for="facilities-select">Select facilities:</label>
+       <select class="form-control text-center" id="facilities-select">
+         <option class="facility">Showers</option>
+         <option class="facility">Toilets</option>
+         <option class="facility">Laundry locations</option>
+         <option class="facility">Wifi locations</option>
+         <option class="facility">Phone charging locations</option>
+       </select>
       </div>
       <p id = "mapinfo">Constantly on the move? Gotta go? Gotta go NOW? Find your stop.<br>The 5 stops closest to you
         are displayed below.</p>
@@ -63,6 +58,7 @@
     </div>
     <div id="commons">
     <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Icons licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>
+    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 </div>
   </footer>
 </html>
