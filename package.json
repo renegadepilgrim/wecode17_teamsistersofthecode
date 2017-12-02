@@ -1,0 +1,19 @@
+{
+  "name": "wecode17_teamsistersofthecode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "features.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renegadepilgrim/wecode17_teamsistersofthecode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renegadepilgrim/wecode17_teamsistersofthecode/issues"
+  },
+  "homepage": "https://github.com/renegadepilgrim/wecode17_teamsistersofthecode#readme"
+}
