@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Stop and Drop V.1</title>
+      <meta name="viewport" content="initial-scale=1.0">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <header>
+        <img id="tardis" src="images/pp_icon.jpg" alt="Porta Potty">
+        <h1>Stop and Drop</h1>
+        <h3><i>When nature calls, will you answer?</i></h3>
+        <nav>
+          <div id = "index-nav">
+            <a href = "index.html">Home</a>
+            <a href = "about.html">About</a>
+          </div>
+        </nav>
+      </header>
+      <br>
+      <p id = "mapinfo">Constantly on the move? Gotta go? Gotta go NOW? Find your stop.<br>The 5 stops closest to you
+        are displayed below.</p>
+      <p id="mapDirections">Double click on the map to add a stop and help other people who gotta go!</p>
+      <div id="map_holder" style="height:400px">
+      </div>
+      <div id="forDisplay">
+      <div id="displayList"></div>
+      <div id="displayTable"><div id="gottaGo">When you gotta go,<br>you gotta go!</div></div>
+      </div>
+    <script type="text/javascript" src="googlemap.js"></script>
+    <script type = "text/javascript" src = "features.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxM8Bh8A5SsoWYt1SL_LUpC3GMrCgzPzo&callback=initMap">
+    </script>
+    </body>
+  <footer>
+    <div id="disclaimer">
+      <h3>Disclaimer</h3>
+      <p>Due to the transient nature of porta-potty locations and use restrictions, our legal team has advised us to advise you that use of our web application is at your own risk and we are not responsible for anything that happens.  USE AT OWN RISK!</p>
+    </div>
+    <div id="commons">
+    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Icons licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>
+</div>
+  </footer>
+</html>
