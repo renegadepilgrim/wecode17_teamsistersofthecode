@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/renegadepilgrim/wecode17_teamsistersofthecode/issues"
   },
-  "homepage": "https://github.com/renegadepilgrim/wecode17_teamsistersofthecode#readme"
+  "homepage": "https://github.com/renegadepilgrim/wecode17_teamsistersofthecode#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1",
+    "request": "^2.83.0"
+  }
 }
