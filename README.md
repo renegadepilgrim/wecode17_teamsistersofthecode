@@ -21,17 +21,12 @@ npm install
 Node above version 4
 ```
 
-### Installing
-
-```
-Download from app store.
-```
 
 ## Deployment
 
 ## Built with
 
-Hiroku
+Heroku
 
 ## Contributing
 
@@ -42,6 +37,9 @@ Stop and Drop
 ## Authors
 
 ## License
+```
+MIT
+```
 
 ## Acknoledgements
 
