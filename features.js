@@ -19,7 +19,7 @@ var Features = function (title, hours, position, handWash, privacy, clean, rollR
   this.comment = comment;
 }
 
-//use constructor Features to add to pottSpots array
+//use constructor Features to add to pottySpots array
 var pottySpots = [];
 pottySpots.push (new Features ('Riverfront Potty', 'Always Open', {lat: 45.52549, lng: -122.670283} , 'Yes', 'private', 'Yes', '2', 'It was nice. There were no bugs in the potty. I had a grand time.' ));
 pottySpots.push (new Features ('Super Stinky Potty', 'Always Open', {lat: 45.52441, lng: -122.677257} , 'No', 'public', 'No', '2', 'Name says it all. Nothing more to be said.' ));
