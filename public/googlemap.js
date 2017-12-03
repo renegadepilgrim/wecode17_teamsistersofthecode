@@ -49,6 +49,7 @@ function initMap() {
     service.nearbySearch(request, callback);
       
       generateList();
+      fetchRestrooms();
     }, function() {
 //Code breaking without function in place. Possible API code issue//
     });
@@ -84,4 +85,43 @@ function createMarker(place) {
     infoWindow.setContent(place.name);
     infoWindow.open(map, this);
   });
+}
+
+function fetchRestrooms(){
+  var url = "https://www.refugerestrooms.org:443/api/v1/restrooms/by_location.json?lat=" + pos.lat + "&lng=" + pos.lng;
+  fetch(url) // Call the fetch function passing the url of the API as a parameter
+  .then((resp) => resp.json())
+  .then(function(data) {
+    console.log(data);
+    for(var i = 0; i < data.length; i++){
+      createRestroomMarker(data[i]);
+    }
+
+  })
+  .catch(function(error) {
+    console.log(error);
+  }); 
+  
+}
+
+function createRestroomMarker(refuge){
+    var refugeLoc = {lat: refuge.latitude, lng: refuge.longitude};
+    var refugeiImage = {
+      url: "images/noun_982776_cc.png",
+      scaledSize: new google.maps.Size(50,50),
+      origin: new google.maps.Point(0,0),
+      anchor: new google.maps.Point(0,0)
+    };
+    var marker = new google.maps.Marker({
+      map: map,
+      icon: refugeiImage,
+      position: refugeLoc
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      var directions = refuge.directions ? refuge.directions: "none given";
+      var comment = refuge.comment ? refuge.comment: "no comments yet";
+      infoWindow.setContent("<strong>" + refuge.name + "</strong><BR>Directions: " + directions  + "<BR>Changing Table: " + refuge.changing_table + "<BR>" + comment);
+      infoWindow.open(map, this);
+    });
 }
