@@ -195,7 +195,6 @@ function displayTable(event) {
 function generateList() {
   calculateDistance();
   sortPottyList();
-  displayList();
 }
 
 
