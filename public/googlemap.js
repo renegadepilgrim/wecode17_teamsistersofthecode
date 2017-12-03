@@ -47,9 +47,9 @@ function initMap() {
   
     service = new google.maps.places.PlacesService(map);
     service.nearbySearch(request, callback);
-      
-      generateList();
       fetchRestrooms();
+      generateList();
+      
     }, function() {
 //Code breaking without function in place. Possible API code issue//
     });
